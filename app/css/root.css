@@ -1,0 +1,26 @@
+:root {
+  --mdc-theme-primary: #58c8eb;
+  --mdc-theme-secondary: #f192cd;
+  --mdc-theme-background: #ffffff;
+  --drawer-selected: rgba(255, 168, 253, 0.12);
+  --el1: #bdbdbd;
+  --el2: #eeeeee;
+  --drawer-bg: #eeeeee;
+  --btn-color: #cccccc;
+  --color: #404040;
+  --light-color: #ffffff;
+  --dark-color: #ffffff;
+}
+
+[data-theme=dark] {
+  --mdc-theme-primary: #58c8eb;
+  --mdc-theme-secondary: #f192cd;
+  --mdc-theme-background: #121212;
+  --el1: #bdbdbd;
+  --el2: #1d1d1d;
+  --drawer-bg: #212121;
+  --btn-color: #ffffff;
+  --color: #ffffff;
+  --light-color: #ffffff;
+  --dark-color: #000000;
+}
