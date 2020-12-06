@@ -18,8 +18,6 @@ window.addEventListener('resize', function (event) {
 
 const path = require('path');
 
-
-
 //Function for dynamically loading the page content
 window.goto = function goto(event = 'Home', page = event) {
     if (event != 'Home') {
@@ -32,10 +30,11 @@ window.goto = function goto(event = 'Home', page = event) {
 
     //Jquery function that dynamically loads x.html into the main content of the page by id
     $(function () {
+        //on build add vapor-store
         $('#main-content').load(path.join('..', `vapor-store/${page.toLowerCase().replace(/ /g, '_')}.html`));
     });
-}
-goto()
+};
+goto();
 
 //Checks the theme from localstorage and updates the theme switch button
 function checkTheme() {
@@ -61,3 +60,13 @@ function checkTheme() {
 
 //check s the theme on startup
 checkTheme();
+
+window.download = function download() {};
+
+window.home = function home() {
+    $.get('https://api.github.com/repos/SushyDev/vapor-store/releases/latest', function (data) {
+        document.getElementById('version').innerHTML = data.name;
+        document.getElementById('download-btn').setAttribute('onclick', `window.open('${data.assets[0].browser_download_url}')`);
+    });
+
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- ... Fav icon and page title ... -->
+        <link rel="icon" href="/icon.a3e8a18f.png">
+        <title>Vapor Store</title>
+
+        <!-- ... Material Design CSS ... -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+
+        <!-- ... Material Design System & JQuery Library-->
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+        <!-- ... Main script s... -->
+        <script src="/import.92392434.js" defer=""></script>
+        <script src="/main.8f75cf09.js" defer=""></script>
+    <link rel="stylesheet" href="/import.92392434.css"></head>
+
+    <body>
+        <!-- ... The top bar header ... -->
+        <header class="mdc-top-app-bar app-bar" id="app-bar" data-mdc-auto-init="MDCTopAppBar">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" data-mdc-auto-init="MDCRipple">menu</button>
+                    <span class="mdc-top-app-bar__title" id="top-app-bar-title">Vapor Store 2</span>
+                </section>
+            </div>
+        </header>
+
+        <!-- ... The sidebar ... -->
+        <aside class="mdc-drawer mdc-drawer--dismissible mdc-top-app-bar--fixed-adjust" id="mdc-drawer" data-mdc-auto-init="MDCDrawer">
+            <div class="mdc-drawer__content">
+                <!-- ... The list inside the sidebar ... -->
+                <div class="mdc-list">
+                    <!-- ... The items in side the list ... -->
+                    <a class="mdc-list-item mdc-list-item--activated" aria-current="page">
+                        <span class="mdc-list-item__ripple"></span>
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+                        <span class="mdc-list-item__text">Home</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ... The main content of the site, whats displayed next to the sidebar and under the top bar ... -->
+        <div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust" id="mdc-drawer-app-content">
+            <main class="main-content" id="main-content"></main>
+        </div>
+    </body>
+
+    <!-- ... A script to initialize all material design components javascript ... -->
+    <script>window.mdc.autoInit();</script>
+</html>
