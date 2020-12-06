@@ -87,4 +87,4 @@ module.exports=function(t){return fetch(t).then(function(t){return t.text()})};
 },{}],0:[function(require,module,exports) {
 var b=require("yU0Q");b.register("html",require("OkSu"));b.load([["home.html","RyXA"],["index.html","s8zH"]]).then(function(){require("BaGe");});
 },{}]},{},[0], null)
-//# sourceMappingURL=/import.ff3839c6.js.map
+//# sourceMappingURL=import.ff3839c6.js.map
