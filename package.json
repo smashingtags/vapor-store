@@ -1,0 +1,24 @@
+{
+  "name": "vapor-store-site",
+  "version": "1.0.0",
+  "description": "The website for Vapor Store",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel site/html/*.html",
+    "build": "parcel build site/html/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SushyDev/vapor-store/tree/website"
+  },
+  "author": "SushyDev",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.30.0"
+  },
+  "dependencies": {
+    "html": "^1.0.0",
+    "material-components-web": "^8.0.0"
+  }
+}

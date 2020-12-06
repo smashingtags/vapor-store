@@ -1,0 +1,130 @@
+:root {
+    --mdc-theme-primary: #58c8eb;
+    --mdc-theme-secondary: #f192cd;
+    --mdc-theme-background: #ffffff;
+    --drawer-selected: rgba(255, 168, 253, 0.12);
+    --el1: #bdbdbd;
+    --el2: #eeeeee;
+    --drawer-bg: #eeeeee;
+    --btn-color: #cccccc;
+    --color: #404040;
+    --light-color: #ffffff;
+    --dark-color: #ffffff;
+}
+
+[data-theme='dark'] {
+    --mdc-theme-primary: #58c8eb;
+    --mdc-theme-secondary: #f192cd;
+    --mdc-theme-background: #121212;
+    --el1: #bdbdbd;
+    --el2: #1d1d1d;
+    --drawer-bg: #212121;
+    --btn-color: #ffffff;
+    --color: #ffffff;
+    --light-color: #ffffff;
+    --dark-color: #000000;
+}
+
+/*Removes body padding, sets a background color and prepairs for the configuration for the page height to comply with chrome browser on mobile devices and configure some page defaults*/
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--mdc-theme-background);
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100vw;
+    overflow: hidden;
+    user-select: none;
+    font-family: sans-serif;
+
+    /*main content is what's displayed next to the sidebar and under the topbar, this makes sure it doesn't scroll no matter what and all the text in it has the right color, min-width is for when the sidebar is opened on narrow devices so the content scales nicelty*/
+    .main-content {
+        overflow: hidden;
+        color: var(--el1);
+        min-width: 0px !important;
+
+        /*Adds a small margin to the intro div with the text in it to follow the material design standards*/
+        .intro {
+            margin: 0 20px;
+        }
+
+        /*Styling for the dog breed cards, sets the background and icon/text colors*/
+        .mdc-card {
+            background-color: var(--el2);
+
+            .mdc-card__action-buttons .mdc-button {
+                color: var(--mdc-theme-secondary);
+
+                .mdc-button__ripple::before,
+                ::after {
+                    background: var(--mdc-theme-secondary);
+                }
+            }
+
+            .mdc-icon-button {
+                color: var(--mdc-theme-primary);
+            }
+        }
+    }
+
+    /*The dialog is the popup you see when you click on more information about a breed, this sets the minimum height and width to 90% of their respective viewport*/
+    .mdc-dialog {
+        .mdc-dialog__surface {
+            min-height: 90vh !important;
+        }
+    }
+}
+
+/*Gives the app content a transition time, this transition makes the content of the page shift smoothly when the drawer is opened*/
+.mdc-drawer-app-content {
+    transition: all 0.2s ease-in !important;
+}
+
+/*makes sure the top bar is always on top and gives it a small shadow thats following the material design guidelines*/
+.mdc-top-app-bar {
+    z-index: 7;
+    box-shadow: 0 2px 4px rgba(66, 66, 66, 0.5);
+}
+
+/*gives the background of mdc drawer the color of elevation 2 and forces the text colors to comply with the theme and adds a small shadow to the right side of the drawer*/
+.mdc-drawer {
+    .mdc-list-item__graphic,
+    .mdc-list-item__text {
+        color: var(--color);
+    }
+
+    .mdc-list-item--activated {
+        .mdc-list-item__graphic,
+        .mdc-list-item__text {
+            color: var(--mdc-theme-primary);
+        }
+    }
+
+    box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+}
+
+/*Gives the buttons on the settings page the colors nessecary for the theme*/
+.settings button {
+    i,
+    span {
+        color: var(--btn-color);
+    }
+
+    margin: 20px;
+}
+
+/*This themes the items in the sidebar, most important thing to note is that the last item in the list gets pushed all the way down*/
+.mdc-list {
+    height: calc(100% - 16px);
+    display: flex;
+    flex-direction: column;
+
+    * {
+        margin-top: 0px !important;
+    }
+
+    /*
+    a:nth-last-child(1) {
+        margin-top: auto !important;
+    }
+    */
+}
