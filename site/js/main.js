@@ -32,7 +32,7 @@ window.goto = function goto(event = 'Home', page = event) {
 
     //Jquery function that dynamically loads x.html into the main content of the page by id
     $(function () {
-        $('#main-content').load(path.join('..', `${page.toLowerCase().replace(/ /g, '_')}.html`));
+        $('#main-content').load(path.join('..', `vapor-store/${page.toLowerCase().replace(/ /g, '_')}.html`));
     });
 }
 goto()
